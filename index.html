@@ -191,7 +191,7 @@
 
         .hero-container {
             max-width: 1400px;
-            margin: 4rem auto;
+            margin: 5rem auto;
             padding: 0 3rem;
             display: grid;
             grid-template-columns: 1.2fr 1fr;
@@ -568,6 +568,18 @@
             box-shadow: 0 15px 35px rgba(0, 51, 102, 0.4);
         }
 
+        /* Clases para animaciones que aparecen una sola vez */
+        .fade-in-once {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in-once.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         /* Responsive */
         @media (max-width: 1024px) {
             .nav-container {
@@ -675,7 +687,6 @@
     <section class="hero" id="home">
         <div class="hero-container">
             <div class="hero-content">
-                <div class="hero-subtitle">Bienvenido a UTN</div>
                 <h1 class="hero-title">La educación es la mejor clave del éxito en la vida</h1>
                 <p class="hero-description">
                     La educación transforma vidas y abre puertas hacia un futuro brillante. 
@@ -707,8 +718,8 @@
     <!-- About Section -->
     <section class="about" id="about">
         <div class="about-container">
-            <div class="about-single-image"></div>
-            <div class="about-content">
+            <div class="about-single-image fade-in-once"></div>
+            <div class="about-content fade-in-once">
                 <div class="section-subtitle">
                     <i class="fas fa-graduation-cap"></i>
                     Acerca de Nuestra Universidad
@@ -727,7 +738,7 @@
     <!-- Features Section -->
     <section class="features" id="courses">
         <div class="features-container">
-            <div class="features-content">
+            <div class="features-content fade-in-once">
                 <h2>Por Qué Elegir UTN Chacabuco</h2>
                 <p class="features-subtitle">
                     Con más de 25 años de trayectoria en la ciudad, somos la única sede universitaria 
@@ -777,7 +788,7 @@
                     </div>
                 </div>
             </div>
-            <div class="features-image"></div>
+            <div class="features-image fade-in-once"></div>
         </div>
     </section>
 
@@ -786,7 +797,7 @@
         <div class="stats-container" style="max-width: 1400px; margin: 0 auto; padding: 0 3rem;">
             <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem;">
                 
-                <div class="stat-item" style="text-align: center; padding: 2rem; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                <div class="stat-item fade-in-once" style="text-align: center; padding: 2rem; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                     <div style="background: linear-gradient(135deg, #003366, #0066cc); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2rem; color: white;">
                         <i class="fas fa-calendar-alt"></i>
                     </div>
@@ -794,7 +805,7 @@
                     <p style="color: #4a5568; font-weight: 500;">Años de Trayectoria</p>
                 </div>
 
-                <div class="stat-item" style="text-align: center; padding: 2rem; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                <div class="stat-item fade-in-once" style="text-align: center; padding: 2rem; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                     <div style="background: linear-gradient(135deg, #003366, #0066cc); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2rem; color: white;">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
@@ -802,7 +813,7 @@
                     <p style="color: #4a5568; font-weight: 500;">Carreras Activas</p>
                 </div>
 
-                <div class="stat-item" style="text-align: center; padding: 2rem; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                <div class="stat-item fade-in-once" style="text-align: center; padding: 2rem; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                     <div style="background: linear-gradient(135deg, #003366, #0066cc); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2rem; color: white;">
                         <i class="fas fa-building"></i>
                     </div>
@@ -810,7 +821,7 @@
                     <p style="color: #4a5568; font-weight: 500;">Sede Propia</p>
                 </div>
 
-                <div class="stat-item" style="text-align: center; padding: 2rem; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                <div class="stat-item fade-in-once" style="text-align: center; padding: 2rem; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
                     <div style="background: linear-gradient(135deg, #003366, #0066cc); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2rem; color: white;">
                         <i class="fas fa-handshake"></i>
                     </div>
@@ -966,30 +977,28 @@
             }
         });
 
-        // Animate elements on scroll
+        // Nuevo sistema de animación que solo se ejecuta una vez
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         };
 
-        const observer = new IntersectionObserver(function(entries) {
+        const oneTimeObserver = new IntersectionObserver(function(entries) {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+                if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                    entry.target.classList.add('animated');
+                    // Una vez animado, dejamos de observarlo
+                    oneTimeObserver.unobserve(entry.target);
                 }
             });
         }, observerOptions);
 
-        // Observe elements for animation
-        document.querySelectorAll('.hero-content, .about-content, .features-content, .about-single-image, .stat-item').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(50px)';
-            el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-            observer.observe(el);
+        // Aplicar la nueva clase a los elementos que queremos animar
+        document.querySelectorAll('.fade-in-once').forEach(el => {
+            oneTimeObserver.observe(el);
         });
 
-        // Stats counter animation
+        // Stats counter animation (solo se ejecuta una vez)
         function animateCounter(element, start, end, duration) {
             let startTimestamp = null;
             const step = (timestamp) => {
@@ -1004,22 +1013,19 @@
             window.requestAnimationFrame(step);
         }
 
-        // Trigger counter animation when stats section is visible
+        // Trigger counter animation cuando stats section es visible (solo una vez)
         const statsObserver = new IntersectionObserver(function(entries) {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
+                if (entry.isIntersecting && !entry.target.dataset.animated) {
+                    entry.target.dataset.animated = 'true';
                     const counters = entry.target.querySelectorAll('h3');
-                    // Using custom animation for non-incremental values
                     const values = ["38+", "7", "2013", "1996"];
                     counters.forEach((counter, index) => {
                         if (index === 0) {
-                            // For "38+" animate the number
                             animateCounter(counter, 0, 38, 2000);
                         } else if (index === 1) {
-                            // For "7" animate the number  
                             animateCounter(counter, 0, 7, 1500);
                         } else {
-                            // For years like "2013" and "1996", display directly with fade-in
                             counter.style.opacity = '0';
                             counter.innerHTML = values[index];
                             setTimeout(() => {
@@ -1038,7 +1044,7 @@
             statsObserver.observe(statsSection);
         }
 
-        // Add hover effects to stat items
+        // Efectos hover para stat items
         document.querySelectorAll('.stat-item').forEach(item => {
             item.addEventListener('mouseenter', function() {
                 this.style.transform = 'translateY(-10px)';
@@ -1048,9 +1054,13 @@
             });
         });
 
-        // Add hover effects to social links
+        // Efectos hover para social links
         document.querySelectorAll('footer a[href*="facebook"], footer a[href*="instagram"], footer a[href*="mailto"], footer a[href*="frsn"]').forEach(link => {
-            link.addEventListener('mouseenter', function() {
+            const isIcon = link.style.width === '40px' || 
+                          link.querySelector('i.fab') || 
+                          (link.style.borderRadius && link.style.borderRadius.includes('50%'));
+            if (isIcon) {
+                link.addEventListener('mouseenter', function() {
                 this.style.background = 'linear-gradient(135deg, #003366, #0066cc)';
                 this.style.transform = 'translateY(-3px)';
             });
@@ -1058,28 +1068,25 @@
                 this.style.background = 'rgba(255,255,255,0.1)';
                 this.style.transform = 'translateY(0)';
             });
-        });
-
-        // Add hover effects to career links
-        document.querySelectorAll('footer a[href="#"]').forEach(link => {
-            // Only apply blue hover to career links, not social links
-            if (link.closest('div').querySelector('h3').textContent.includes('Nuestras Carreras') || 
-                link.closest('div').querySelector('h3').textContent.includes('Enlaces Útiles')) {
-                link.addEventListener('mouseenter', function() {
-                    this.style.color = '#0066cc';
-                });
-                link.addEventListener('mouseleave', function() {
-                    this.style.color = '#a0aec0';
-                });
             }
         });
 
-        // Add parallax effect to hero section
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero');
-            if (hero && scrolled < hero.offsetHeight) {
-                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        document.querySelectorAll('footer ul li a').forEach(link => {
+            // Solo excluir redes sociales (iconos en círculo), no enlaces de texto
+            const isIcon = link.style.width === '40px' || 
+                          link.querySelector('i.fab') || 
+                          (link.style.borderRadius && link.style.borderRadius.includes('50%'));
+            
+            if (!isIcon) {
+                link.addEventListener('mouseenter', function() {
+                    this.style.color = '#0066cc';
+                    this.style.paddingLeft = '10px';
+                    this.style.transition = 'all 0.3s ease';
+                });
+                link.addEventListener('mouseleave', function() {
+                    this.style.color = '#a0aec0';
+                    this.style.paddingLeft = '0';
+                });
             }
         });
     </script>
